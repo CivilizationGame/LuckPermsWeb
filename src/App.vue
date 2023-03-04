@@ -8,11 +8,11 @@
         </router-link>
         <transition name="fade">
           <div v-if="!config.selfHosted && !isSponsorRoute" class="nav-message">
-            <router-link to="/sponsor">
+            <a href="https://www.fastmirror.net/sponsor">
               <hr />
-              <img src="@/assets/bisect.svg" alt="Bisect Hosting">
-              <span v-html="$t('sponsor')" />
-            </router-link>
+              <img src="@/assets/wuyuidc.svg" alt="Bisect Hosting">
+              <span>特别赞助！<span>
+            </a>
           </div>
         </transition>
       </div>
@@ -125,13 +125,14 @@
             <font-awesome icon="code-branch" fixed-width />
             <a href="https://github.com/LuckPerms/LuckPermsWeb" target="_blank">LuckPermsWeb</a>
             @
-            <a :href="'https://github.com/LuckPerms/LuckPermsWeb/commit/' + commitHash" target="_blank">{{ commitHash }}</a>
+            <a :href="'https://github.com/FastMirror-MC/LuckPermsWeb/commit/' + commitHash" target="_blank">{{ commitHash }}</a>
           </li>
           <li>
-            <router-link v-if="!config.selfHosted" to="/wiki/Credits" target="_blank">
-              Copyright © 2017-{{ new Date().getFullYear().toString() }} LuckPerms contributors
-            </router-link>
-            <a v-else href="https://luckperms.net/wiki/Credits" target="_blank">
+          <a href="https://www.fastmirror.net/" target="_blank">无极镜像&nbsp;</a>
+          <a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2021028678号-4</a>
+          </li>
+          <li>
+            <a href="https://luckperms.net/wiki/Credits" target="_blank">
               Copyright © 2017-{{ new Date().getFullYear().toString() }} LuckPerms contributors
             </a>
           </li>
